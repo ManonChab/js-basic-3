@@ -38,6 +38,12 @@ console.log(sumD);
 
 //5//
 
+function exp (x, y) {
+    return Math.pow(x, y);
+}
+let exp1 = exp(x,y);
+console.log(exp1);
+
 //6//
 
 //7//
@@ -96,6 +102,14 @@ console.log(lowercase);
 
 //5//
 
+function letterPosition (text, position) {
+    return text[position];
+}
+
+let text5 = "JAVASCRIPT IS THE BEST"
+
+console.log(letterPosition(text5, 6));
+
 //6//
 
 //7//
@@ -122,11 +136,60 @@ console.log(total);
 
 //2//
 
+function calculateAverage(array) {
+    let sumB =0;
+    for (let i =0; i < array.length; i++) {
+        sumB += array[i];
+    }
+    return sumB / array.length;
+}
+let average = calculateAverage(numeros);
+console.log(average);
+
 //3//
 
+function ascendingArray(array) {
+    return array.sort((a, b) => a-b);
+}
+
+let exercice3 = ascendingArray(numeros);
+console.log(exercice3);
+
 //4//
+const filter = numeros.filter(giveMeMoreThan);
+
+function giveMeMoreThan (number) {
+    return number >=10;
+}
+console.log(filter);
 
 //5//
+
+const moreNumeros = [ 76, 56, 26, 37, 2, 89];
+const arrayTotal = numeros.concat(moreNumeros);
+
+function mergeTheArrays(){
+    return arrayTotal
+}
+
+console.log(arrayTotal);
+
+/* P.S:
+
+al principio, he probado lo siguiente :
+
+function mergeTheArrays(){
+    const arrayTotal = numeros.concat(moreNumeros);
+    return arrayTotal
+}
+console.log(arrayTotal);
+
+pero sale que "arrayTotal" no es definido... no entiendo porque...
+cuando salgo el const de la function, ahora si funciona.
+pero siento que no respondo muy bien al ejercicio porque la funcion no hace mucho... 
+el const afuera de la funcion esta llevando el trabajo, y asi no es "reproductible"
+
+*/
 
 //6//
 
@@ -138,17 +201,58 @@ console.log(total);
 
 //10//
 
+
 //***Objetos literales***//
 
+const myList = {
+    name:"Leo",
+    surname:"Godfroy-Burnos",
+    age: "18 months",
+    weight: "10,5 kg",
+    height:"80cm"
+    }
+
 //1//
+function whatIsYourName (object) {
+    let myName = object.name;
+    return myName;
+}
+console.log(whatIsYourName(myList));
 
 //2//
+function changeAge (object) {
+    let newAge = object.age = otherNumber
+    return newAge
+} 
+let otherNumber = "2 years"
+changeAge(myList);
+console.log(myList);
 
 //3//
+function addAProperty (object, newProperty) {
+    let property = object.eyecolor = something;
+    return property
+}
+
+let newProperty = "eye color";
+let something = null;
+addAProperty(myList, newProperty)
+console.log(myList);
 
 //4//
+function deleteProperty (object, property) {
+    return updatedObject = delete(object.height)
+}
+deleteProperty(myList);
+console.log(myList);
 
 //5//
+
+function howManyProperty(list) {
+    let howMany = Object.keys(list);
+    return howMany.length;
+}
+console.log(howManyProperty(myList));
 
 //6//
 
