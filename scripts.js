@@ -229,22 +229,18 @@ changeAge(myList);
 console.log(myList);
 
 //3//
-function addAProperty (object, newProperty) {
-    let property = object.eyecolor = something;
-    return property
+function addAProperty(object, newProperty) {
+    object[newProperty] = null;
+    return object;
 }
-
-let newProperty = "eye color";
-let something = null;
-addAProperty(myList, newProperty)
-console.log(myList);
+console.log(addAProperty({ name: "Leo" }, "eye color"));
 
 //4//
-function deleteProperty (object, property) {
-    return updatedObject = delete(object.height)
+function removeProperty(object, deleteProperty) {
+    delete object[deleteProperty];
+    return object;
 }
-deleteProperty(myList);
-console.log(myList);
+console.log(removeProperty({ name: "Leo", age: 2 }, "age"));
 
 //5//
 
